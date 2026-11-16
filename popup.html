@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; width: 320px; padding: 12px; margin: 0; }
+    h3 { margin-top: 0; font-size: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+    input[type="text"], select { padding: 6px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; font-size: 13px; }
+    button { padding: 6px 10px; cursor: pointer; border: none; border-radius: 4px; background: #007bff; color: white; font-weight: bold; }
+    button:hover { background: #0056b3; }
+    ul { list-style: none; padding: 0; margin: 10px 0; max-height: 230px; overflow-y: auto; }
+    li { display: flex; justify-content: space-between; align-items: center; padding: 6px 4px; border-bottom: 1px solid #eee; gap: 6px; }
+    .user-left { display: flex; align-items: center; gap: 8px; max-width: 225px; }
+    .user-badge-preview { flex-shrink: 0; width: 16px; height: 16px; display: flex; align-items: center; }
+    .user-info { display: flex; flex-direction: column; overflow: hidden; }
+    .user-name { font-weight: bold; font-size: 13px; }
+    .user-note { font-size: 11px; color: #555; word-wrap: break-word; }
+    .actions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
+    .icon-btn { cursor: pointer; font-weight: bold; border: none; background: none; font-size: 15px; padding: 3px 6px; border-radius: 4px; }
+    .edit { color: #007bff; }
+    .edit:hover { background: #e5f1ff; }
+    .del { color: #d90429; }
+    .del:hover { background: #ffe5e5; }
+    .backup-section { border-top: 1px solid #ccc; padding-top: 10px; display: flex; gap: 8px; justify-content: space-between; }
+    .btn-secondary { background: #6c757d; flex: 1; font-size: 12px; }
+    .btn-secondary:hover { background: #545b62; }
+    .footer { margin-top: 10px; text-align: center; font-size: 10px; color: #888; }
+    .footer a { color: #666; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h3>Sledovaní uživatelé</h3>
+  <div class="form-group">
+    <input type="text" id="usernameInput" placeholder="Přezdívka na Aukru...">
+    <input type="text" id="noteInput" placeholder="Poznámka (např. Neplatí, Spolehlivý...)">
+    <select id="typeSelect">
+      <option value="red">🔴 Červená – Pozor / Problémový</option>
+      <option value="yellow">🟡 Žlutá – Upozornění / Sledovat</option>
+      <option value="green">🟢 Zelená – Ověřený / Spolehlivý</option>
+    </select>
+    <button id="addBtn">Přidat uživatele</button>
+  </div>
+  
+  <ul id="userList"></ul>
+
+  <div class="backup-section">
+    <button id="exportBtn" class="btn-secondary">Exportovat seznam</button>
+    <button id="importBtn" class="btn-secondary">Importovat seznam</button>
+    <input type="file" id="importFile" accept=".json" style="display: none;">
+  </div>
+
+  <div class="footer">© 2026 <a href="https://github.com/djfinch/aukro-hlidac" target="_blank">djfinch</a></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
