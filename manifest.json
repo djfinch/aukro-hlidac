@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Aukro Hlídač Uživatelů",
-  "version": "1.4",
+  "version": "1.5",
   "author": "djfinch",
   "homepage_url": "https://github.com/djfinch/aukro-hlidac",
   "description": "Označí vybrané uživatele na Aukro.cz symbolem s poznámkou a upozorní změnou ikony. © 2026 djfinch",

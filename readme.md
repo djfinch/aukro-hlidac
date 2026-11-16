@@ -2,6 +2,12 @@
 
 Lehké rozšíření pro prohlížeč Google Chrome zaměřené na soukromí, určené pro web **aukro.cz**. Umožňuje udržovat vlastní seznam vybraných uživatelů s poznámkami a vizuálně je zvýrazňovat přímo na stránce.
 
+## Ukázky
+
+| Seznam sledovaných uživatelů | Označený uživatel na Aukru | Výsledek na stránce |
+| --- | --- | --- |
+| ![Seznam sledovaných uživatelů](img/popup.png) | ![Označený uživatel na Aukru](img/overview.png) | ![Výsledek na stránce Aukra](img/result.png) |
+
 ## Funkce
 - **Barevné výstražné značky:** Automaticky vyhledává zadané přezdívky na `aukro.cz` a přidává za ně ikonu podle zvolené kategorie (červený výstražný trojúhelník, žluté upozornění nebo zelený odznak ověřeného uživatele), která se přizpůsobí velikosti písma a nerozbíjí řádkování.
 - **Vlastní poznámky a úpravy:** Ke každému uživateli lze připsat poznámku, která se zobrazí po najetí myší na ikonu. Záznamy i jejich barvu lze kdykoliv upravit.
